@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF"
+    android:orientation="vertical"
+    android:baselineAligned="false">
+
+    <TextView
+        android:text="Enter current acceleration for each axis in m/s^2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:id="@+id/textView3"
+        android:textSize="16sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/transparent"
+        android:id="@+id/accelXTextView"
+        android:hint="x axis acceleration"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:textSize="16sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/transparent"
+        android:id="@+id/accelYTextView"
+        android:hint="y axis acceleration"
+        android:layout_below="@+id/accelXTextView"
+        android:layout_alignStart="@+id/accelXTextView"
+        android:textSize="16sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/transparent"
+        android:id="@+id/accelZTextView"
+        android:hint="z axis acceleration"
+        android:layout_below="@+id/accelYTextView"
+        android:layout_alignStart="@+id/accelYTextView"
+        android:textSize="16sp" />
+
+    <TextView
+        android:text="Enter current cadence (rpm):"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/textView4"
+        android:textSize="16sp"
+        android:layout_below="@+id/accelZTextView"
+        android:layout_alignStart="@+id/accelZTextView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/curCadenceTextView"
+        android:hint="decimal rpm"
+        android:textSize="16sp"
+        android:background="@android:color/transparent"
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_toEndOf="@+id/textView4"
+        android:layout_marginLeft="4sp" />
+
+    <Button
+        android:text="Update Data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:id="@+id/distBtn"
+        android:background="@drawable/red_button"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Average speed:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/textView4"
+        android:id="@+id/textView5"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView5"
+        android:layout_alignStart="@+id/distBtn"
+        android:id="@+id/avgSpeedTextView"
+        android:layout_marginLeft="4sp"
+        android:textSize="16sp"
+        android:text="0.0" />
+
+    <TextView
+        android:text="km/h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/avgSpeedUnitTextView"
+        android:layout_marginLeft="4sp"
+        android:textSize="16sp"
+        android:layout_alignBaseline="@+id/avgSpeedTextView"
+        android:layout_alignBottom="@+id/avgSpeedTextView"
+        android:layout_toEndOf="@+id/avgSpeedTextView"
+        android:layout_toRightOf="@+id/avgSpeedTextView" />
+
+    <TextView
+        android:text="Current speed:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView9"
+        android:textSize="16sp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/textView5"
+        android:layout_alignStart="@+id/textView5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/curSpeedTextView"
+        android:layout_marginLeft="4sp"
+        android:textSize="16sp"
+        android:text="0.0"
+        android:layout_alignBaseline="@+id/textView9"
+        android:layout_alignBottom="@+id/textView9"
+        android:layout_toEndOf="@+id/textView9" />
+
+    <TextView
+        android:text="km/h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/curSpeedUnitTextView"
+        android:layout_marginLeft="4sp"
+        android:textSize="16sp"
+        android:layout_alignBaseline="@+id/curSpeedTextView"
+        android:layout_alignBottom="@+id/curSpeedTextView"
+        android:layout_toEndOf="@+id/curSpeedTextView"
+        android:layout_toRightOf="@+id/curSpeedTextView" />
+
+    <TextView
+        android:text="Distance traveled:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView13"
+        android:textSize="16sp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/textView9"
+        android:layout_alignStart="@+id/textView9" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/distTextView"
+        android:layout_marginLeft="4sp"
+        android:textSize="16sp"
+        android:text="0.0"
+        android:layout_alignBaseline="@+id/textView13"
+        android:layout_alignBottom="@+id/textView13"
+        android:layout_toEndOf="@+id/textView13" />
+
+    <TextView
+        android:text="km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/distUnitTextView"
+        android:layout_marginLeft="4sp"
+        android:textSize="16sp"
+        android:layout_alignBaseline="@+id/distTextView"
+        android:layout_alignBottom="@+id/distTextView"
+        android:layout_toEndOf="@+id/distTextView"
+        android:layout_toRightOf="@+id/distTextView" />
+
+    <TextView
+        android:text="Average cadence:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView17"
+        android:textSize="16sp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/textView13"
+        android:layout_alignStart="@+id/textView13" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/avgCadenceTextView"
+        android:layout_marginLeft="4sp"
+        android:textSize="16sp"
+        android:text="0.0"
+        android:layout_alignBaseline="@+id/textView17"
+        android:layout_alignBottom="@+id/textView17"
+        android:layout_toEndOf="@+id/textView17" />
+
+    <Button
+        android:text="Reset data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reset"
+        android:background="@drawable/red_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_marginBottom="16dp" />
+
+    <CheckBox
+        android:text="Empirical units"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/units"
+        android:textAppearance="@android:style/TextAppearance"
+        android:textColor="@android:color/black"
+        android:layout_above="@+id/reset"
+        android:layout_alignStart="@+id/curCadenceTextView"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/connect"
+        style="@style/button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/red_button"
+        android:text="@string/connect"
+        android:layout_below="@+id/units"
+        android:layout_alignStart="@+id/textView17" />
+
+    <TextView
+        android:text="rpm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView19"
+        android:layout_marginLeft="4sp"
+        android:textSize="16sp"
+        android:layout_alignBaseline="@+id/avgCadenceTextView"
+        android:layout_alignBottom="@+id/avgCadenceTextView"
+        android:layout_toEndOf="@+id/avgCadenceTextView" />
+
+</RelativeLayout><!-- From: file:/D:/Android/AndroidStudioProjects/SimpleControlsFinalTest/res/layout/main.xml -->
